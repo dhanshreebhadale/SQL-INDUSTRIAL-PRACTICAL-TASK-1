@@ -1,0 +1,180 @@
+Task 1:
+	create database ecommerce_db;
+
+Task 2:
+	use ecommerce_db;
+
+Task 3:
+	create table products(product_id INT PRIMARY KEY, product_name VARCHAR(100), category VARCHAR(50), brand VARCHAR(50), price DECIMAL(10,2),quantity INT,city VARCHAR(50),status VARCHAR(20));
+
+Task 4:
+	describe products;
+
+Task 5:
+	show tables;
+
+Task 6:
+	insert into products values (201, 'Galaxy M55', 'Mobile', 'Samsung', 32000, 15, 'Pune', 'Available');
+
+Task 7:
+	insert into products values (202, 'iPhone 15', 'Mobile', 'Apple', 65000, 8, 'Mumbai', 'Available');
+
+Task 8:
+	insert into products values(203, 'Moto Edge 50', 'Mobile', 'Motorola', 28000, 20, 'Pune', 'Available');
+
+Task 9:
+	insert into products values(204, 'Inspiron 15', 'Laptop', 'Dell', 58000, 6, 'Nashik', 'Available');
+
+Task 10:
+	insert into products values(205, 'IdeaPad Slim 3', 'Laptop', 'Lenovo', 45000, 12, 'Mumbai', 'Available');
+
+Task 11:
+	insert into products values(206, 'Galaxy Watch 6', 'Watch', 'Samsung', 22000, 4, 'Pune', 'Out of Stock');
+
+Task 12:
+	insert into products values(207, 'Apple Watch SE', 'Watch', 'Apple', 30000, 10, 'Mumbai', 'Available');
+
+Task 13:
+	insert into products values(208, 'Redmi Pad', 'Tablet', 'Xiaomi', 24000, 18, 'Pune', 'Available');
+
+Task 14:
+	insert into products values(209, 'OnePlus Pad', 'Tablet', 'OnePlus', 35000, 5, 'Nashik', 'Available');
+
+Task 15:
+	insert into products values(210, 'Bluetooth Speaker', 'Accessories', 'JBL', 7000, 25, 'Mumbai', 'Available');
+
+Task 16:
+	select * from products;
+
+Task 17:
+	select product_name from products;
+
+Task 18:
+	select product_name,price from products;
+
+Task 19:
+	select product_name, category, brand, price from products;
+
+Task 20:
+	select * from products where city = 'Pune';
+
+Task 21:
+	select * from products where city = 'Mumbai';
+
+Task 22:
+	select * from products where category = 'Mobile';
+
+Task 23:
+	select * from products where category = 'Laptop';
+
+Task 24:
+	select * from products where price > 30000;
+
+Task 25:
+	select * from products where price < 30000;
+
+Task 26:
+	select * from products where price = 35000;
+
+Task 27:
+	select * from products where price >= 45000;
+
+Task 28:
+	select * from products where price <= 30000;
+
+Task 29:
+	select * from products where quantity > 10;
+
+Task 30:
+	select * from products where quantity < 10;
+
+Task 31:
+	select * from products where city = 'Pune' AND category = 'Mobile';
+
+Task 32:
+	select * from products where city = 'Mumbai' AND status = 'Available';
+
+Task 33:
+	select * from products where price > 30000 AND quantity > 5;
+
+Task 34:
+	select * from products where  price >= 30000 AND price <= 60000;
+
+Task 35:
+	select * from products where  city = 'Pune' OR city = 'Mumbai';
+
+Task 36:
+	select * from products where  category = 'Mobile' OR category = 'Laptop';
+
+Task 37:
+	select * from products where  quantity < 10 OR price > 50000;
+
+Task 38:
+	select * from products where  category = 'Mobile' AND price > 30000;
+
+Task 39:
+	select * from products where brand = 'Samsung' OR brand = 'Apple';
+
+Task 40:
+	select * from products where city = 'Pune' AND status = 'Available' AND quantity > 10;
+
+Task 41:
+	select * from products where price between 25000 and 50000;
+
+Task 42:
+	select * from products where quantity between 5 and 15;
+
+Task 43:
+	select * from products where category in  ('Mobile', 'Laptop', 'Tablet');
+
+Task 44:
+	select * from products where city in  ('Pune', 'Mumbai');
+
+Task 45:
+	select * from products where not brand = 'Samsung';
+
+Task 46:
+	select * from products where not status = 'Out of Stock';
+
+Task 47:
+	select * from products where price != 30000;
+
+Task 48:
+	select * from products where product_name like 'Galaxy%';
+
+Task 49:
+	select * from products where product_name like '%pad%';
+
+Task 50:
+	select * from products where category = 'Mobile' AND (price > 30000 OR quantity > 15);
+
+Task 51:
+	update products set price = 34000 where product_name = 'Galaxy M55';
+
+Task 52:
+	update products set quantity = 12 where product_name = 'IPhone 15';
+
+Task 53:
+	update products set status = 'Available' where product_name = 'Galaxy Watch 6';
+
+Task 54:
+	update products set price = price + 2000 where category = 'Mobile';
+
+Task 55:
+	update products set quantity = quantity + 5 where city = 'Pune';
+
+Task 56:
+	update products set status = 'Out of Stock' where quantity < 5;
+
+Task 57:
+	delete from products where product_id = 210;
+
+Task 58:
+	delete from products where price < 8000;
+
+Task 59:
+	delete from products where status = 'Out of Stock' AND quantity < 5;
+
+Task 60:
+	delete from products where category = 'Tablet' AND price > 30000;
+

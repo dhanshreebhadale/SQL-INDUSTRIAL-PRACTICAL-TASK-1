@@ -1,0 +1,141 @@
+Task 1:
+	select * from movies where rating > 8;
+
+Task 2:
+	select * from movies where price > 150;
+
+Task 3:
+	select * from movies where language = 'Hindi';
+
+Task 4:
+	select * from movies where views > 1000000;
+
+Task 5:
+	select * from movies where release_year > 2015;
+
+Task 6:
+	select * from movies where rating between 8 and 8.5;
+
+Task 7:
+	select * from movies where genre in ('Action', 'Comedy', 'Thriller');
+
+Task 8:
+	select * from movies where director = 'S. S. Rajamouli';
+
+Task 9:
+	select * from movies where production_company = 'Hombale Films';
+
+Task 10:
+	select * from movies where production_company = 'Arka Media Works';
+
+Task 11:
+	select * from movies order by views desc limit 5;
+
+Task 12:
+	select * from movies order by price asc limit 5;
+
+Task 13:
+	select * from movies order by rating desc;
+
+Task 14:
+	select distinct language from movies;
+
+Task 15:
+	select title as Movie, rating as IMDb_Rating from movies;
+
+Task 16:
+	select title, director, production_house from movies;
+
+Task 17:
+	select * from movies order by production_house asc, rating desc;
+
+Task 18:
+	select * from movies where release_year > 2015 order by rating desc limit 5;
+
+Task 19:
+	select * from movies where language = 'Telugu' order by budget desc limit 3;
+
+Task 20:
+	select * from movies order by budget desc limit 5;
+
+Task 21:
+	select * from movies where title like 'A%';
+
+Task 22:
+	select * from movies where title like '%a';
+
+Task 23:
+	select * from movies where title like '%Baahubali%';
+
+Task 24:
+	select * from movies where title like '%Dhoom%';
+
+Task 25:
+	select * from movies where char_length(title) = 5;
+
+Task 26:
+	select * from movies where director like '%Raj%';
+
+Task 27:
+	select * from movies where production_house like '%Films%';
+
+Task 28:
+	select * from movies where language like 'T%';
+
+Task 29:
+	select * from movies where price > 150 and rating > 8;
+
+Task 30:
+	select * from movies where budget > 1000000 or rating > 8.5;
+
+Task 31:
+	select * from movies where genre != 'Horror';
+
+Task 32:
+	select * from movies where release_year between 2015 and 2020;
+
+Task 33:
+	select * from movies where price between 100 and 200;
+
+Task 34:
+	select * from movies where language in ('Hindi', 'Telugu');
+
+Task 35:
+	select * from movies where genre = 'Action' and budget > 1000000;
+
+Task 36:
+	select * from movies where director = 'S. S. Rajamouli' and rating > 8;
+
+Task 37:
+	select * from movies where production_house = 'Hombale Films' and release_year > 2019;
+
+Task 38:
+	select * from movies where director != 'S. S. Rajamouli';
+
+Challenges & CEO Challenge
+Challenge 1:
+	select * from movies where rating > 8 and budget < 500000;
+
+Challenge 2:
+	select * from movies where price < 150 and budget > 1000000;
+
+Challenge 3:
+	select * from movies where language = 'English' and release_year > 2015 and rating > 8.5;
+
+Challenge 4:
+	select * from movies where release_year > 2020 order by budget desc limit 3;
+
+Challenge 5:
+	select * from movies where price > (select avg(price) from movies);
+
+Challenge 6:
+	select * from movies where director = 'S. S. Rajamouli' order by release_year asc;
+
+Challenge 7:
+	select title, release_year, rating, budget from movies where production_house = 'Hombale Films';
+
+Challenge 8:
+	select * from movies where title like '%Baahubali%' or title like '%KGF%';
+
+FINAL BOSS — CEO Challenge:
+	select title, genre, rating, price, budget, director, production_house from movies where rating > 8 and budget > 500000 and price between 100 and 250 order by budget desc limit 5;

@@ -1,0 +1,58 @@
+Level 1 — Food Detective
+Task 1: SELECT * FROM restaurants WHERE rating > 4.5;
+Task 2: SELECT * FROM restaurants WHERE avg_order_value < 300;
+Task 3: SELECT * FROM restaurants WHERE city = 'Pune';
+Task 4: SELECT * FROM restaurants WHERE orders_count > 20000;
+Task 5: SELECT * FROM restaurants WHERE est_delivery_time > 40;
+Task 6: SELECT * FROM restaurants WHERE rating BETWEEN 4.2 AND 4.7;
+Task 7: SELECT * FROM restaurants WHERE cuisine IN ('South Indian', 'Italian', 'Biryani');
+Task 8: SELECT * FROM restaurants WHERE owner_name LIKE '%Patil%';
+Task 9: SELECT * FROM restaurants WHERE brand = restaurant_name;
+Task 10: SELECT * FROM restaurants WHERE delivery_fee < 30;
+
+Level 2 — Recommendation Team
+Task 11: SELECT * FROM restaurants ORDER BY orders_count DESC LIMIT 5;
+Task 12: SELECT * FROM restaurants ORDER BY avg_order_value ASC LIMIT 5;
+Task 13: SELECT * FROM restaurants ORDER BY rating DESC;
+Task 14: SELECT DISTINCT cuisine FROM restaurants;
+Task 15: SELECT restaurant_name AS Restaurant_Name, rating AS Customer_Rating FROM restaurants;
+Task 16: SELECT restaurant_name, owner_name, brand FROM restaurants;
+Task 17: SELECT * FROM restaurants ORDER BY city ASC, rating DESC;
+Task 18: SELECT * FROM restaurants WHERE orders_count > 10000 ORDER BY rating DESC LIMIT 5;
+Task 19: SELECT * FROM restaurants WHERE city = 'Pune' ORDER BY orders_count DESC LIMIT 3;
+Task 20: SELECT * FROM restaurants ORDER BY delivery_fee DESC LIMIT 5;
+
+Level 3 — Find the Hidden Restaurants
+Task 21: SELECT * FROM restaurants WHERE restaurant_name LIKE 'S%';
+Task 22: SELECT * FROM restaurants WHERE restaurant_name LIKE '%House';
+Task 23: SELECT * FROM restaurants WHERE restaurant_name LIKE '%Cafe%';
+Task 24: SELECT * FROM restaurants WHERE cuisine LIKE '%Indian%';
+Task 25: SELECT * FROM restaurants WHERE restaurant_name LIKE '_____';
+Task 26: SELECT * FROM restaurants WHERE owner_name LIKE '%Raj%';
+Task 27: SELECT * FROM restaurants WHERE brand LIKE '%Foods%';
+Task 28: SELECT * FROM restaurants WHERE city LIKE 'P%';
+
+Level 4 — Business Team
+Task 29: SELECT * FROM restaurants WHERE avg_order_value > 400 AND rating > 4.5;
+Task 30: SELECT * FROM restaurants WHERE orders_count > 20000 OR rating > 4.7;
+Task 31: SELECT * FROM restaurants WHERE city != 'Pune';
+Task 32: SELECT * FROM restaurants WHERE est_delivery_time BETWEEN 25 AND 40;
+Task 33: SELECT * FROM restaurants WHERE avg_order_value BETWEEN 300 AND 600;
+Task 34: SELECT * FROM restaurants WHERE city IN ('Pune', 'Mumbai');
+Task 35: SELECT * FROM restaurants WHERE cuisine = 'Fast Food' AND orders_count > 20000;
+Task 36: SELECT * FROM restaurants WHERE rating > 4.5 AND delivery_fee < 40;
+Task 37: SELECT * FROM restaurants WHERE city = 'Bengaluru' AND orders_count > 10000;
+Task 38: SELECT * FROM restaurants WHERE owner_name != 'Rahul Jain';
+
+Level 5 — Boss Challenges
+Challenge 1: SELECT * FROM restaurants WHERE rating > 4.5 AND orders_count < 10000;
+Challenge 2: SELECT * FROM restaurants WHERE avg_order_value < 300 AND orders_count > 20000;
+Challenge 3: SELECT * FROM restaurants WHERE est_delivery_time < 30 AND rating > 4.3;
+Challenge 4: SELECT * FROM restaurants WHERE city = 'Mumbai' ORDER BY orders_count DESC LIMIT 3;
+Challenge 5: SELECT * FROM restaurants WHERE avg_order_value > (SELECT AVG(avg_order_value) FROM restaurants);
+Challenge 6: SELECT * FROM restaurants WHERE city = 'Pune' ORDER BY orders_count DESC;
+Challenge 7: SELECT restaurant_name, city, rating, avg_order_value FROM restaurants WHERE cuisine = 'South Indian';
+Challenge 8: SELECT * FROM restaurants WHERE avg_order_value > 500 AND rating >= 4.5;
+
+Final Boss — CEO Challenge
+Final Boss: SELECT restaurant_name, cuisine, city, rating, avg_order_value, orders_count, delivery_fee, owner_name, brand FROM restaurants WHERE rating > 4.4 AND orders_count > 10000 AND avg_order_value BETWEEN 300 AND 700 ORDER BY orders_count DESC LIMIT 5;
